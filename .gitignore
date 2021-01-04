@@ -6,5 +6,4 @@ target/
 exercises/clippy/Cargo.toml
 exercises/clippy/Cargo.lock
 .idea
-.vscode
 .wakatime-project

@@ -18,9 +18,4 @@ mod tests {
     fn is_true_when_even() {
         assert!();
     }
-
-    #[test]
-    fn is_false_when_odd() {
-        assert!();
-    }
 }
