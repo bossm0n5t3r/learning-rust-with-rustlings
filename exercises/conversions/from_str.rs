@@ -22,8 +22,7 @@ struct Person {
 // Otherwise, then return a Result of a Person object
 impl FromStr for Person {
     type Err = String;
-    fn from_str(s: &str) -> Result<Person, Self::Err> {
-    }
+    fn from_str(s: &str) -> Result<Person, Self::Err> {}
 }
 
 fn main() {
@@ -82,5 +81,4 @@ mod tests {
     fn missing_name_and_invalid_age() {
         ",one".parse::<Person>().unwrap();
     }
-
 }

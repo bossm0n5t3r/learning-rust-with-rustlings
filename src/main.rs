@@ -25,7 +25,7 @@ mod verify;
 fn main() {
     let matches = App::new("rustlings")
         .version(crate_version!())
-        .author("Olivia Hugger, Carol Nichols")
+        .author("Marisa, Carol Nichols")
         .about("Rustlings is a collection of small exercises to get you used to writing and reading Rust code")
         .arg(
             Arg::with_name("nocapture")
@@ -53,6 +53,11 @@ fn main() {
                 .alias("h")
                 .about("Returns a hint for the current exercise")
                 .arg(Arg::with_name("name").required(true).index(1)),
+        )
+        .subcommand(
+            SubCommand::with_name("list")
+                .alias("l")
+                .about("Lists the exercises available in rustlings")
         )
         .get_matches();
 
@@ -88,6 +93,9 @@ fn main() {
     let exercises = toml::from_str::<ExerciseList>(toml_str).unwrap().exercises;
     let verbose = matches.is_present("nocapture");
 
+    if matches.subcommand_matches("list").is_some() {
+        exercises.iter().for_each(|e| println!("{}", e.name));
+    }
     if let Some(ref matches) = matches.subcommand_matches("run") {
         let name = matches.value_of("name").unwrap();
 
@@ -119,16 +127,42 @@ fn main() {
         verify(&exercises, verbose).unwrap_or_else(|_| std::process::exit(1));
     }
 
-    if matches.subcommand_matches("watch").is_some() && watch(&exercises, verbose).is_ok() {
+    if matches.subcommand_matches("watch").is_some() {
+        if let Err(e) = watch(&exercises, verbose) {
+            println!(
+                "Error: Could not watch your progess. Error message was {:?}.",
+                e
+            );
+            println!("Most likely you've run out of disk space or your 'inotify limit' has been reached.");
+            std::process::exit(1);
+        }
         println!(
             "{emoji} All exercises completed! {emoji}",
             emoji = Emoji("🎉", "★")
         );
         println!();
+        println!("+----------------------------------------------------+");
+        println!("|          You made it to the Fe-nish line!          |");
+        println!("+--------------------------  ------------------------+");
+        println!("                          \\/                         ");
+        println!("     ▒▒          ▒▒▒▒▒▒▒▒      ▒▒▒▒▒▒▒▒          ▒▒   ");
+        println!("   ▒▒▒▒  ▒▒    ▒▒        ▒▒  ▒▒        ▒▒    ▒▒  ▒▒▒▒ ");
+        println!("   ▒▒▒▒  ▒▒  ▒▒            ▒▒            ▒▒  ▒▒  ▒▒▒▒ ");
+        println!(" ░░▒▒▒▒░░▒▒  ▒▒            ▒▒            ▒▒  ▒▒░░▒▒▒▒ ");
+        println!("   ▓▓▓▓▓▓▓▓  ▓▓      ▓▓██  ▓▓  ▓▓██      ▓▓  ▓▓▓▓▓▓▓▓ ");
+        println!("     ▒▒▒▒    ▒▒      ████  ▒▒  ████      ▒▒░░  ▒▒▒▒   ");
+        println!("       ▒▒  ▒▒▒▒▒▒        ▒▒▒▒▒▒        ▒▒▒▒▒▒  ▒▒     ");
+        println!("         ▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▒▒▒▒▒▒▒▒▓▓▒▒▓▓▒▒▒▒▒▒▒▒       ");
+        println!("           ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒         ");
+        println!("             ▒▒▒▒▒▒▒▒▒▒██▒▒▒▒▒▒██▒▒▒▒▒▒▒▒▒▒           ");
+        println!("           ▒▒  ▒▒▒▒▒▒▒▒▒▒██████▒▒▒▒▒▒▒▒▒▒  ▒▒         ");
+        println!("         ▒▒    ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒    ▒▒       ");
+        println!("       ▒▒    ▒▒    ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒    ▒▒    ▒▒     ");
+        println!("       ▒▒  ▒▒    ▒▒                  ▒▒    ▒▒  ▒▒     ");
+        println!("           ▒▒  ▒▒                      ▒▒  ▒▒         ");
+        println!();
         println!("We hope you enjoyed learning about the various aspects of Rust!");
-        println!(
-            "If you noticed any issues, please don't hesitate to report them to our repo."
-        );
+        println!("If you noticed any issues, please don't hesitate to report them to our repo.");
         println!("You can also contribute your own exercises to help the greater community!");
         println!();
         println!("Before reporting an issue or contributing, please read our guidelines:");
@@ -143,15 +177,18 @@ fn main() {
 
 fn spawn_watch_shell(failed_exercise_hint: &Arc<Mutex<Option<String>>>) {
     let failed_exercise_hint = Arc::clone(failed_exercise_hint);
-    println!("Type 'hint' to get help");
+    println!("Type 'hint' to get help or 'clear' to clear the screen");
     thread::spawn(move || loop {
         let mut input = String::new();
         match io::stdin().read_line(&mut input) {
             Ok(_) => {
-                if input.trim().eq("hint") {
+                let input = input.trim();
+                if input.eq("hint") {
                     if let Some(hint) = &*failed_exercise_hint.lock().unwrap() {
                         println!("{}", hint);
                     }
+                } else if input.eq("clear") {
+                    println!("\x1B[2J\x1B[1;1H");
                 } else {
                     println!("unknown command: {}", input);
                 }
