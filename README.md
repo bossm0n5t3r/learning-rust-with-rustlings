@@ -1,5 +1,7 @@
 # learning-rust-with-rustlings
 
+![current_version](https://img.shields.io/badge/current_version-4.3.0-green)
+
 Rust를 공부하고, 예제를 풀어서 올리는 repo입니다.
 
 ## DONE
