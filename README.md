@@ -16,6 +16,8 @@ Rust를 공부하고, 예제를 풀어서 올리는 repo입니다.
 - :white_check_mark: [macros](./exercises/macros)
 - :white_check_mark: [clippy](./exercises/clippy)
 - :white_check_mark: [collections](./exercises/collections)
+  - [Struct std::collections::HashMap 정리](https://bossm0n5t3r.github.io/posts/70/)
+  - [Struct std::vec::Vec 정리](https://bossm0n5t3r.github.io/posts/68/)
 
 ## References
 
