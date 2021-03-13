@@ -20,6 +20,22 @@ Rust를 공부하고, 예제를 풀어서 올리는 repo입니다.
   - [Struct std::vec::Vec 정리](https://bossm0n5t3r.github.io/posts/68/)
 - :white_check_mark: [conversions](./exercises/conversions)
 
+## NOT DONE
+
+- [error_handling](./exercises/error_handling)
+- [generics](./exercises/generics)
+- [modules](./exercises/modules)
+- [move_semantics](./exercises/move_semantics)
+- [option](./exercises/option)
+- [standard_library_types](./exercises/standard_library_types)
+- [tests](./exercises/tests)
+- [threads](./exercises/threads)
+- [traits](./exercises/traits)
+- [Quiz1](./exercises/quiz1.rs)
+- [Quiz2](./exercises/quiz2.rs)
+- [Quiz3](./exercises/quiz3.rs)
+- [Quiz4](./exercises/quiz4.rs)
+
 ## References
 
 - [rust-lang/rustlings](https://github.com/rust-lang/rustlings)
