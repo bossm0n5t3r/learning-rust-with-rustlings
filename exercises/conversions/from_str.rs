@@ -10,7 +10,7 @@ struct Person {
     age: usize,
 }
 
-// I AM NOT DONE
+// I AM DONE
 // Steps:
 // 1. If the length of the provided string is 0, then return an error
 // 2. Split the given string on the commas present in it
@@ -22,7 +22,31 @@ struct Person {
 // Otherwise, then return a Result of a Person object
 impl FromStr for Person {
     type Err = String;
-    fn from_str(s: &str) -> Result<Person, Self::Err> {}
+    fn from_str(s: &str) -> Result<Person, Self::Err> {
+        let length = s.len();
+        if length == 0 {
+            // 1. If the length of the provided string is 0, then return an error
+            return Err("the length of the provided string is 0".to_string());
+        } else {
+            // 2. Split the given string on the commas present in it
+            let mut splitGivenString: Vec<&str> = s.split(",").collect();
+            // 3. Extract the first element from the split operation and use it as the name
+            let name = splitGivenString[0].parse::<String>().unwrap();
+            // 4. If the name is empty, then return an error
+            if name.is_empty() {
+                return Err("the name is empty".to_string());
+            }
+            // 5. Extract the other element from the split operation and parse it into a `usize` as the age
+            //    with something like `"4".parse::<usize>()`.
+            // If while parsing the age, something goes wrong, then return an error
+            let age = splitGivenString[1].parse::<usize>().unwrap();
+            // Otherwise, then return a Result of a Person object
+            Ok(Person {
+                name: name,
+                age: age,
+            })
+        }
+    }
 }
 
 fn main() {
