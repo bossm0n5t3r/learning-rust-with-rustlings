@@ -20,10 +20,10 @@ Rust를 공부하고, 예제를 풀어서 올리는 repo입니다.
   - [Struct std::vec::Vec 정리](https://bossm0n5t3r.github.io/posts/68/)
 - :white_check_mark: [conversions](./exercises/conversions)
 - :white_check_mark: [error_handling](./exercises/error_handling)
+- :white_check_mark: [generics](./exercises/generics)
 
 ## NOT DONE
 
-- [generics](./exercises/generics)
 - [modules](./exercises/modules)
 - [move_semantics](./exercises/move_semantics)
 - [option](./exercises/option)
