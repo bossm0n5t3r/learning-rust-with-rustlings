@@ -21,10 +21,10 @@ Rust를 공부하고, 예제를 풀어서 올리는 repo입니다.
 - :white_check_mark: [conversions](./exercises/conversions)
 - :white_check_mark: [error_handling](./exercises/error_handling)
 - :white_check_mark: [generics](./exercises/generics)
+- :white_check_mark: [modules](./exercises/modules)
 
 ## NOT DONE
 
-- [modules](./exercises/modules)
 - [move_semantics](./exercises/move_semantics)
 - [option](./exercises/option)
 - [standard_library_types](./exercises/standard_library_types)
