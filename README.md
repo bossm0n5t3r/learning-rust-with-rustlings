@@ -2,6 +2,8 @@
 
 ![current_version](https://img.shields.io/badge/current_version-4.3.0-green)
 
+## 🦀 Solutions for the rustlings exercises
+
 Rust를 공부하고, 예제를 풀어서 올리는 repo입니다.
 
 ## DONE
