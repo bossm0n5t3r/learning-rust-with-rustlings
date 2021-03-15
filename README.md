@@ -26,13 +26,13 @@ Rust를 공부하고, 예제를 풀어서 올리는 repo입니다.
 - :white_check_mark: [modules](./exercises/modules)
 - :white_check_mark: [move_semantics](./exercises/move_semantics)
 - :white_check_mark: [option](./exercises/option)
+- :white_check_mark: [traits](./exercises/traits)
 
 ## NOT DONE
 
 - [standard_library_types](./exercises/standard_library_types)
 - [tests](./exercises/tests)
 - [threads](./exercises/threads)
-- [traits](./exercises/traits)
 - [Quiz1](./exercises/quiz1.rs)
 - [Quiz2](./exercises/quiz2.rs)
 - [Quiz3](./exercises/quiz3.rs)
