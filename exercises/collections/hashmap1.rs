@@ -8,12 +8,10 @@
 //
 // Make me compile and pass the tests!
 //
-// Execute the command `rustlings hint collections3` if you need
+// Execute the command `rustlings hint hashmap1` if you need
 // hints.
 
 // I AM DONE
-
-// Execute the command `rustlings run collections3` if you want to run
 
 use std::collections::HashMap;
 

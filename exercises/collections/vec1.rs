@@ -2,15 +2,15 @@
 // Your task is to create a `Vec` which holds the exact same elements
 // as in the array `a`.
 // Make me compile and pass the test!
-// Execute the command `rustlings hint collections1` if you need hints.
+// Execute the command `rustlings hint vec1` if you need hints.
 
 // I AM DONE
 
 fn array_and_vec() -> ([i32; 4], Vec<i32>) {
     let a = [10, 20, 30, 40]; // a plain array
-    // TODO: declare your vector here with the macro for vectors
-    // Way 1. Use <[_]>.to_vec()
-    // https://doc.rust-lang.org/std/primitive.slice.html#method.to_vec
+                              // TODO: declare your vector here with the macro for vectors
+                              // Way 1. Use <[_]>.to_vec()
+                              // https://doc.rust-lang.org/std/primitive.slice.html#method.to_vec
     let v = a.to_vec();
 
     // Way 2. Use vec! macro

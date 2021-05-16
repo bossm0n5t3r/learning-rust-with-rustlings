@@ -47,7 +47,7 @@ impl From<&str> for Person {
             // 3. Extract the first element from the split operation and use it as the name
             let name: String = splitGivenString[0].to_string();
             // 4. If the name is empty, then return the default of Person
-            if name.is_empty() || splitGivenString.len() == 1 {
+            if name.is_empty() || splitGivenString.len() != 2 {
                 Person::default()
             } else {
                 // 5. Extract the other element from the split operation and parse it into a `usize` as the age
@@ -137,6 +137,20 @@ mod tests {
     #[test]
     fn test_missing_name_and_invalid_age() {
         let p: Person = Person::from(",one");
+        assert_eq!(p.name, "John");
+        assert_eq!(p.age, 30);
+    }
+
+    #[test]
+    fn test_trailing_comma() {
+        let p: Person = Person::from("Mike,32,");
+        assert_eq!(p.name, "John");
+        assert_eq!(p.age, 30);
+    }
+
+    #[test]
+    fn test_trailing_comma_and_some_string() {
+        let p: Person = Person::from("Mike,32,man");
         assert_eq!(p.name, "John");
         assert_eq!(p.age, 30);
     }
