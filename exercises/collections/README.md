@@ -1,4 +1,4 @@
-### Collections
+# Collections
 
 Rust’s standard library includes a number of very useful data
 structures called collections. Most other data types represent one
@@ -11,10 +11,12 @@ runs.
 This exercise will get you familiar with two fundamental data
 structures that are used very often in Rust programs:
 
-* A *vector* allows you to store a variable number of values next to
+- A _vector_ allows you to store a variable number of values next to
   each other.
-* A *hash map* allows you to associate a value with a particular key.
-  You may also know this by the names *map* in C++, *dictionary* in
-  Python or an *associative array* in other languages.
+- A _hash map_ allows you to associate a value with a particular key.
+  You may also know this by the names [_unordered map_ in C++](https://en.cppreference.com/w/cpp/container/unordered_map),
+  [_dictionary_ in Python](https://docs.python.org/3/tutorial/datastructures.html#dictionaries) or an _associative array_ in other languages.
 
-[Rust book chapter](https://doc.rust-lang.org/stable/book/ch08-01-vectors.html)
+## Further information
+
+- [Storing Lists of Values with Vectors](https://doc.rust-lang.org/stable/book/ch08-01-vectors.html)

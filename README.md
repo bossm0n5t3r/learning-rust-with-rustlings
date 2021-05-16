@@ -1,6 +1,6 @@
 # learning-rust-with-rustlings
 
-![current_version](https://img.shields.io/badge/current_version-4.3.0-green)
+![current_version](https://img.shields.io/badge/current_version-4.4.0-green)
 
 ## 🦀 Solutions for the rustlings exercises
 
