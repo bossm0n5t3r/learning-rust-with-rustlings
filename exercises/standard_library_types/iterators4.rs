@@ -14,9 +14,12 @@ pub fn factorial(num: u64) -> u64 {
     // Execute `rustlings hint iterators4` for hints.
 
     // First Solution
-    let mut result = 1;
-    (1..num + 1).for_each(|x| result *= x);
-    result
+    // let mut result = 1;
+    // (1..num + 1).for_each(|x| result *= x);
+    // result
+
+    // Second Solution
+    (1..num + 1).into_iter().fold(1, |acc, x| acc * x)
 }
 
 #[cfg(test)]
