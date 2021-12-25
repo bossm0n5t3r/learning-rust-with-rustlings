@@ -32,9 +32,9 @@ impl Package {
         self.sender_country != self.recipient_country
     }
 
-    fn get_fees(&self, cents_per_kg: i32) -> i32 {
-        // Something goes here... (beware of grams to kg conversion)
-        self.weight_in_grams * cents_per_kg / 1000
+    fn get_fees(&self, cents_per_gram: i32) -> i32 {
+        // Something goes here...
+        self.weight_in_grams * cents_per_gram / 1000
     }
 }
 
@@ -55,6 +55,7 @@ mod tests {
     fn create_international_package() {
         let sender_country = String::from("Spain");
         let recipient_country = String::from("Russia");
+
         let package = Package::new(sender_country, recipient_country, 1200);
 
         assert!(package.is_international());
