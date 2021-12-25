@@ -1,6 +1,6 @@
 # learning-rust-with-rustlings
 
-![current_version](https://img.shields.io/badge/current_version-4.4.0-green)
+![current_version](https://img.shields.io/badge/current_version-4.6.0-green)
 
 ## 🦀 Solutions for the rustlings exercises
 
@@ -16,7 +16,7 @@ $ cd learning-rust-with-rustlings
 $ cargo install --force --path .
 ```
 
-## DONE
+## Exercises
 
 - :white_check_mark: [if](./exercises/if)
 - :white_check_mark: [functions](./exercises/functions)
@@ -30,23 +30,21 @@ $ cargo install --force --path .
 - :white_check_mark: [collections](./exercises/collections)
   - [Struct std::collections::HashMap 정리](https://bossm0n5t3r.github.io/posts/70/)
   - [Struct std::vec::Vec 정리](https://bossm0n5t3r.github.io/posts/68/)
-- :white_check_mark: [conversions](./exercises/conversions)
-- :white_check_mark: [error_handling](./exercises/error_handling)
+- [conversions](./exercises/conversions)
+- [error_handling](./exercises/error_handling)
 - :white_check_mark: [generics](./exercises/generics)
-- :white_check_mark: [modules](./exercises/modules)
-- :white_check_mark: [move_semantics](./exercises/move_semantics)
-- :white_check_mark: [option](./exercises/option)
+- [modules](./exercises/modules)
+- [move_semantics](./exercises/move_semantics)
+- [option](./exercises/option)
 - :white_check_mark: [traits](./exercises/traits)
 - :white_check_mark: [standard_library_types](./exercises/standard_library_types)
 - :white_check_mark: [threads](./exercises/threads)
-
-## NOT DONE
-
 - [tests](./exercises/tests)
 - [Quiz1](./exercises/quiz1.rs)
 - [Quiz2](./exercises/quiz2.rs)
 - [Quiz3](./exercises/quiz3.rs)
 - [Quiz4](./exercises/quiz4.rs)
+- [advanced_errors](./exercises/advanced_errors)
 
 ## References
 
