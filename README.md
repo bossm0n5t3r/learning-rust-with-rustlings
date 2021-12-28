@@ -30,7 +30,7 @@ $ cargo install --force --path .
 - :white_check_mark: [collections](./exercises/collections)
   - [Struct std::collections::HashMap 정리](https://bossm0n5t3r.github.io/posts/70/)
   - [Struct std::vec::Vec 정리](https://bossm0n5t3r.github.io/posts/68/)
-- [conversions](./exercises/conversions)
+- :white_check_mark: [conversions](./exercises/conversions)
 - [error_handling](./exercises/error_handling)
 - :white_check_mark: [generics](./exercises/generics)
 - [modules](./exercises/modules)
