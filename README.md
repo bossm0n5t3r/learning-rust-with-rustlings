@@ -34,7 +34,7 @@ $ cargo install --force --path .
 - :white_check_mark: [error_handling](./exercises/error_handling)
 - :white_check_mark: [generics](./exercises/generics)
 - :white_check_mark: [modules](./exercises/modules)
-- [move_semantics](./exercises/move_semantics)
+- :white_check_mark: [move_semantics](./exercises/move_semantics)
 - [option](./exercises/option)
 - :white_check_mark: [traits](./exercises/traits)
 - :white_check_mark: [standard_library_types](./exercises/standard_library_types)
