@@ -31,7 +31,7 @@ $ cargo install --force --path .
   - [Struct std::collections::HashMap 정리](https://bossm0n5t3r.github.io/posts/70/)
   - [Struct std::vec::Vec 정리](https://bossm0n5t3r.github.io/posts/68/)
 - :white_check_mark: [conversions](./exercises/conversions)
-- [error_handling](./exercises/error_handling)
+- :white_check_mark: [error_handling](./exercises/error_handling)
 - :white_check_mark: [generics](./exercises/generics)
 - [modules](./exercises/modules)
 - [move_semantics](./exercises/move_semantics)
