@@ -33,7 +33,7 @@ $ cargo install --force --path .
 - :white_check_mark: [conversions](./exercises/conversions)
 - :white_check_mark: [error_handling](./exercises/error_handling)
 - :white_check_mark: [generics](./exercises/generics)
-- [modules](./exercises/modules)
+- :white_check_mark: [modules](./exercises/modules)
 - [move_semantics](./exercises/move_semantics)
 - [option](./exercises/option)
 - :white_check_mark: [traits](./exercises/traits)
