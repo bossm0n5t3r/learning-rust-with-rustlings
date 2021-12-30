@@ -39,7 +39,7 @@ $ cargo install --force --path .
 - :white_check_mark: [traits](./exercises/traits)
 - :white_check_mark: [standard_library_types](./exercises/standard_library_types)
 - :white_check_mark: [threads](./exercises/threads)
-- [tests](./exercises/tests)
+- :white_check_mark: [tests](./exercises/tests)
 - [Quiz1](./exercises/quiz1.rs)
 - [Quiz2](./exercises/quiz2.rs)
 - [Quiz3](./exercises/quiz3.rs)
