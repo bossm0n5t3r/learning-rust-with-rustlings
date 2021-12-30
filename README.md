@@ -44,7 +44,7 @@ $ cargo install --force --path .
 - [Quiz2](./exercises/quiz2.rs)
 - [Quiz3](./exercises/quiz3.rs)
 - [Quiz4](./exercises/quiz4.rs)
-- [advanced_errors](./exercises/advanced_errors)
+- :white_check_mark: [advanced_errors](./exercises/advanced_errors)
 
 ## References
 
