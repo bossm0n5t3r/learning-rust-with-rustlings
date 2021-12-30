@@ -16,6 +16,39 @@ $ cd learning-rust-with-rustlings
 $ cargo install --force --path .
 ```
 
+## DONE
+
+```
+🎉 All exercises completed! 🎉
+
++----------------------------------------------------+
+|          You made it to the Fe-nish line!          |
++--------------------------  ------------------------+
+                          \/
+     ▒▒          ▒▒▒▒▒▒▒▒      ▒▒▒▒▒▒▒▒          ▒▒
+   ▒▒▒▒  ▒▒    ▒▒        ▒▒  ▒▒        ▒▒    ▒▒  ▒▒▒▒
+   ▒▒▒▒  ▒▒  ▒▒            ▒▒            ▒▒  ▒▒  ▒▒▒▒
+ ░░▒▒▒▒░░▒▒  ▒▒            ▒▒            ▒▒  ▒▒░░▒▒▒▒
+   ▓▓▓▓▓▓▓▓  ▓▓      ▓▓██  ▓▓  ▓▓██      ▓▓  ▓▓▓▓▓▓▓▓
+     ▒▒▒▒    ▒▒      ████  ▒▒  ████      ▒▒░░  ▒▒▒▒
+       ▒▒  ▒▒▒▒▒▒        ▒▒▒▒▒▒        ▒▒▒▒▒▒  ▒▒
+         ▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▒▒▒▒▒▒▒▒▓▓▒▒▓▓▒▒▒▒▒▒▒▒
+           ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+             ▒▒▒▒▒▒▒▒▒▒██▒▒▒▒▒▒██▒▒▒▒▒▒▒▒▒▒
+           ▒▒  ▒▒▒▒▒▒▒▒▒▒██████▒▒▒▒▒▒▒▒▒▒  ▒▒
+         ▒▒    ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒    ▒▒
+       ▒▒    ▒▒    ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒    ▒▒    ▒▒
+       ▒▒  ▒▒    ▒▒                  ▒▒    ▒▒  ▒▒
+           ▒▒  ▒▒                      ▒▒  ▒▒
+
+We hope you enjoyed learning about the various aspects of Rust!
+If you noticed any issues, please don't hesitate to report them to our repo.
+You can also contribute your own exercises to help the greater community!
+
+Before reporting an issue or contributing, please read our guidelines:
+https://github.com/rust-lang/rustlings/blob/main/CONTRIBUTING.md
+```
+
 ## Exercises
 
 - :white_check_mark: [if](./exercises/if)
@@ -40,10 +73,10 @@ $ cargo install --force --path .
 - :white_check_mark: [standard_library_types](./exercises/standard_library_types)
 - :white_check_mark: [threads](./exercises/threads)
 - :white_check_mark: [tests](./exercises/tests)
-- [Quiz1](./exercises/quiz1.rs)
-- [Quiz2](./exercises/quiz2.rs)
-- [Quiz3](./exercises/quiz3.rs)
-- [Quiz4](./exercises/quiz4.rs)
+- :white_check_mark: [Quiz1](./exercises/quiz1.rs)
+- :white_check_mark: [Quiz2](./exercises/quiz2.rs)
+- :white_check_mark: [Quiz3](./exercises/quiz3.rs)
+- :white_check_mark: [Quiz4](./exercises/quiz4.rs)
 - :white_check_mark: [advanced_errors](./exercises/advanced_errors)
 
 ## References
