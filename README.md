@@ -11,6 +11,15 @@
 - Rust와 Cargo: 최신 stable 권장
   - Rustlings `6.5.0`의 최소 지원 Rust 버전은 [1.88](https://github.com/rust-lang/rustlings/releases/tag/v6.5.0)
 
+`rust-toolchain.toml`은 이 프로젝트에서 `stable` 툴체인을 선택하고 Clippy, rustfmt, rust-src를 포함하도록 설정합니다.
+rust-src는 에디터의 표준 라이브러리 분석과 정의 이동에 사용하는 소스입니다.
+Rustup으로 설치한 환경에서는 필요한 툴체인과 구성 요소가 없을 때 자동으로 설치합니다.
+Rust 버전은 고정하지 않으며, 이미 설치된 stable을 최신 버전으로 갱신하려면 다음을 실행하세요.
+
+```sh
+rustup update stable
+```
+
 ```sh
 # Installation
 cargo install rustlings
@@ -50,14 +59,15 @@ rustlings run
 
 ## 프로젝트 구조
 
-| 경로                 | 역할                                                                   |
-| -------------------- | ---------------------------------------------------------------------- |
-| `exercises/`         | 직접 수정하며 풀어가는 문제                                            |
-| `solutions/`         | 문제 완료 후 Rustlings가 자동으로 채우는 공식 해답. 직접 수정하지 않음 |
-| `Cargo.toml`         | 문제와 공식 해답의 실행 대상 설정                                      |
-| `rust-analyzer.toml` | 에디터의 Rust 분석 설정                                                |
-| `init-rustlings.sh`  | 공식 문제를 생성해 현재 프로젝트 루트로 가져오는 초기화 스크립트       |
-| `.gitignore`         | 빌드 산출물, `Cargo.lock`, macOS 메타데이터 등을 제외하는 규칙         |
+| 경로                  | 역할                                                                   |
+| --------------------- | ---------------------------------------------------------------------- |
+| `exercises/`          | 직접 수정하며 풀어가는 문제                                            |
+| `solutions/`          | 문제 완료 후 Rustlings가 자동으로 채우는 공식 해답. 직접 수정하지 않음 |
+| `Cargo.toml`          | 문제와 공식 해답의 실행 대상 설정                                      |
+| `rust-toolchain.toml` | stable 툴체인과 Clippy·rustfmt·rust-src 구성 요소 설정                 |
+| `rust-analyzer.toml`  | 에디터의 Rust 분석 설정                                                |
+| `init-rustlings.sh`   | 공식 문제를 생성해 현재 프로젝트 루트로 가져오는 초기화 스크립트       |
+| `.gitignore`          | 빌드 산출물, `Cargo.lock`, macOS 메타데이터 등을 제외하는 규칙         |
 
 문제와 Rust Book의 장별 대응은 [exercises/README.md](exercises/README.md)를 참고하세요.
 공식 해답에 대한 설명은 [solutions/README.md](solutions/README.md)에 있습니다.
