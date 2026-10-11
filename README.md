@@ -67,8 +67,8 @@ rustlings run
 **새로 시작하거나 문제 구성을 교체할 때만 사용하세요. 재실행하면 기존 풀이와 같은 이름의 파일을 덮어씁니다.**
 실행 전 현재 작업을 커밋해 복구할 기준점을 확보하세요.
 
-스크립트는 POSIX 셸, `rustlings`, `rsync`가 필요합니다. 설치된 Rustlings 버전의 문제를 생성하므로
-먼저 `rustlings --version`으로 버전을 확인하세요.
+스크립트는 POSIX 셸, `rustlings`, `rsync`, `curl`, `awk`와 인터넷 연결이 필요합니다.
+설치된 Rustlings 버전의 문제를 생성하므로 먼저 `rustlings --version`으로 버전을 확인하세요.
 
 프로젝트 루트에서 실행합니다.
 
@@ -77,11 +77,16 @@ rustlings run
 ```
 
 1. 임시 디렉터리에서 `rustlings init`을 실행합니다. 안내가 나오면 Enter를 누릅니다.
-2. `.vscode/`와 `.gitignore`를 가져올지 각각 `[y/N]`으로 묻습니다.
+2. LICENSE에 추가할 연도와 저작권자를 차례로 입력합니다. 스크립트가 `Copyright (c) <연도> <저작권자>` 형식으로 조합하며, 둘 중 하나에서 Enter만 누르면 고지를 추가하지 않습니다.
+3. `.vscode/`와 `.gitignore`를 가져올지 각각 `[y/N]`으로 묻습니다.
    - `y` 또는 `Y`: 복사하고 같은 이름의 파일을 덮어씁니다.
    - `n`, `N` 또는 Enter: 복사하지 않고 현재 파일을 유지합니다.
-3. 생성된 `.git`은 제외하고 나머지를 현재 프로젝트 루트로 복사합니다. 기존 Git 이력은 유지됩니다.
-4. 임시 디렉터리를 정리합니다.
+4. 생성된 `.git`은 제외하고 나머지를 현재 프로젝트 루트로 복사합니다. 기존 Git 이력은 유지됩니다.
+5. 임시 디렉터리를 정리합니다.
+
+초기화 과정에서 [upstream의 MIT LICENSE](https://raw.githubusercontent.com/rust-lang/rustlings/refs/heads/main/LICENSE)를
+다운로드하고, 원저작자 고지 아래에 입력한 연도와 저작권자로 구성한 고지를 추가해 루트 `LICENSE`로 복사합니다.
+기존 `LICENSE`도 덮어쓰며, 다운로드가 실패하면 프로젝트 파일을 복사하기 전에 중단합니다.
 
 복사는 같은 이름의 파일을 덮어쓰지만, 생성본에 없는 기존 파일을 삭제하지는 않습니다.
 `.gitignore` 복사를 선택하면 저장소에서 직접 추가한 규칙도 대체되므로 실행 후 확인하세요.
@@ -92,6 +97,15 @@ git diff
 ```
 
 > 초기화 중 Clippy가 없다는 오류가 나오면 `rustup component add clippy`로 설치하세요.
+
+## 셸 스크립트 포맷팅
+
+`shfmt`가 설치된 환경에서 프로젝트 루트에서 실행합니다.
+POSIX 문법, 공백 4칸 들여쓰기, `case` 분기 들여쓰기와 리다이렉션 뒤 공백을 적용합니다.
+
+```sh
+shfmt -ln posix -i 4 -ci -sr -w init-rustlings.sh
+```
 
 ## 참고 자료
 
