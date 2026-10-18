@@ -19,3 +19,6 @@ rustc-ice-*.txt
 
 # macOS
 .DS_Store
+
+# IntelliJ IDEA
+.idea/
